@@ -10,9 +10,6 @@ from Operacoes import executar_operacao
 
 
 def realizar_calculo():
-    """Executa um ciclo completo de cálculo:
-    lê os dois números e a operação, exibe o resultado.
-    Retorna False se o usuário digitar FIM, True para continuar."""
     try:
         a = ler_numero_ou_fim("Digite o primeiro número (ou FIM para encerrar): ")
         if a is None:
@@ -36,14 +33,12 @@ def realizar_calculo():
 
 
 def loop_principal():
-    """Mantém a calculadora rodando até o usuário digitar FIM."""
     continuar = True
     while continuar:
         continuar = realizar_calculo()
 
 
 def main():
-    """Ponto de entrada do programa."""
     exibir_boas_vindas()
     loop_principal()
     exibir_encerramento()
